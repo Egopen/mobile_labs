@@ -1,18 +1,16 @@
-package com.example.restaraunt
-
-import Category
-import ProductOrder
-import StateDB
-import Order
-import Product
-import android.R
-import services.UserDB
+package services
 
 import io.github.jan.supabase.createSupabaseClient
 import io.github.jan.supabase.postgrest.Postgrest
 import io.github.jan.supabase.postgrest.from
 import io.github.jan.supabase.serializer.KotlinXSerializer
 import kotlinx.serialization.json.Json
+import models.Category
+import models.Order
+import models.Product
+import models.ProductOrder
+import models.StateDB
+import models.UserDB
 import java.util.UUID
 
 class DBService {
@@ -21,7 +19,7 @@ class DBService {
         supabaseUrl = "https://jqdlkmvhtwwuaxhxuznx.supabase.co",
         supabaseKey = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImpxZGxrbXZodHd3dWF4aHh1em54Iiwicm9sZSI6InNlcnZpY2Vfcm9sZSIsImlhdCI6MTc2NDI0MTc4NSwiZXhwIjoyMDc5ODE3Nzg1fQ.tPglXqvr61BCflB9z-OING_YHkIAwMhjVSy_YqcRsTQ"
     ) {
-        install(Postgrest)
+        install(Postgrest.Companion)
         defaultSerializer = KotlinXSerializer(
             Json {
                 ignoreUnknownKeys = true

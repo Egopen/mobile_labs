@@ -1,7 +1,7 @@
 package com.example.restaraunt
 
-import Category
-import Product
+import models.Category
+import models.Product
 import android.content.Intent
 import android.content.pm.PackageManager
 import android.os.Build
@@ -22,7 +22,9 @@ import androidx.core.view.WindowInsetsCompat
 import androidx.lifecycle.lifecycleScope
 import kotlinx.coroutines.launch
 import org.json.JSONObject
+import services.DBService
 import services.JSONChecker
+import services.OrderStatusService
 
 class MainActivity : AppCompatActivity() {
 

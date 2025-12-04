@@ -1,7 +1,7 @@
 package services
 
 import android.content.Context
-import com.example.restaraunt.DBService
+import services.DBService
 import org.json.JSONObject
 
 class JSONChecker(private val dbService: DBService) {

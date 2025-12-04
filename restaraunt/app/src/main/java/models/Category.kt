@@ -1,7 +1,9 @@
+package models
+
 import kotlinx.serialization.Serializable
 
 @Serializable
-data class StateDB(
+data class Category(
     val id: String,
     val name: String
 )

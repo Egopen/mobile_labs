@@ -12,6 +12,7 @@ import androidx.cardview.widget.CardView
 import androidx.lifecycle.lifecycleScope
 import kotlinx.coroutines.launch
 import org.json.JSONObject
+import services.DBService
 import services.JSONChecker
 
 class UserActivity : AppCompatActivity() {

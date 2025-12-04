@@ -27,7 +27,7 @@
         <activity android:name=".CartActivity" android:exported="false"/>
 
         <service
-            android:name=".OrderStatusService"
+            android:name="services.OrderStatusService"
             android:exported="false"
             android:foregroundServiceType="dataSync" />
 
